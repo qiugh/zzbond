@@ -3,8 +3,8 @@ let Taskager = require('taskager');
 
 class Zzbond extends Taskager {
   constructor(options) {
-    options = options || {};
-    options.configFilesPath = path.resolve(__dirname, './config');
+    options = (!options || typeof options !== 'object') ? {} : options;
+    options.configFilesPath = path.resolve(__dirname, './');
     super(options);
   }
 }
