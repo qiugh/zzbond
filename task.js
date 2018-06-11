@@ -131,6 +131,7 @@ module.exports = function () {
         "func": function (task) {
           console.log('executing final processor')
           console.log(task.response.body)
+          return task
         }
       }
     ]
